@@ -1,0 +1,66 @@
+<h1 class="text-center">
+    <b>{{ message }}</b>
+</h1>
+
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h2 class="panel-title text-center glyphicon-envelope"> FILL UP THE FORM</h2>
+        </div>
+        <div class="panel-body">
+            <form name="uploadForm" id="uploadForm" class="form-horizontal" enctype="multipart/form-data" method="post" action="/" novalidate spellcheck="false" autocomplete="off">
+                <div class="form-group">
+                    <label for="email" class="col-xs-2 control-label">Email</label>
+                    <div class="col-xs-4">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email" required ng-model="data.email">
+                        <ng-messages for="uploadForm.email.$dirty && uploadForm.email.$error" class="text-danger">
+                            <ng-message when="email">Please enter a valid Email ID.</ng-message>
+                        </ng-messages>
+                    </div>
+
+
+                    <label for="password" class="col-xs-2 control-label">Password</label>
+                    <div class="col-xs-4">
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password" required ng-model="data.password" ng-minlength="8" autocomplete="off">
+                        <ng-messages for="uploadForm.password.$dirty && uploadForm.password.$error" class="text-danger">
+                            <ng-message when="minlength">Please enter a Password of atleast 8 characters.</ng-message>
+                        </ng-messages>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="subjectName" class="col-xs-2 control-label">Subject Name</label>
+                    <div class="col-xs-4">
+                        <select name="subjectName" id="subjectName" class="form-control" required ng-model="data.subject">
+                            <option value="1">System Programming & Compiler Construction</option>
+                            <option value="2">Software Engineering</option>
+                            <option value="3">Distributed Databases</option>
+                            <option value="4">Mobile Communication & Computing</option>
+                            <option value="5">Elective-I</option>
+                            <option value="6">Network Programming Laboratory</option>
+                        </select>
+                    </div>
+
+                    <label for="titleName" class="col-xs-2 control-label">Title Name</label>
+                    <div class="col-xs-4">
+                        <input type="text" class="form-control" id="titleName" name="title" placeholder="Title Name" required ng-model="data.title">
+                    </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="content" class="col-xs-2 control-label">Content</label>
+                    <div class="col-xs-10">
+                        <input type="file" id="content" name="uploadFile" valid-file required ng-model="data.upload" style="display: none">
+                        <label class="btn btn-warning" for="content">Upload Multiple Files( *.7z, *.rar, *.zip, etc..)</label>
+                    </div>
+                </div>
+                <br>
+                <div class="form-group input-lg">
+                    <div class="col-xs-offset-5 col-xs-7">
+                        <input type="submit" class="btn btn-success" value="Submit" ng-disabled="uploadForm.$invalid" id="submitFiles">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body{
+    color: #D6D6D6;
+    background-color: #3B3669;
+    margin-bottom: 6%;
+}
+
+.footer{
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #101010;
+}
+
+.input-text-bg-color{
+    background-color: #101010;
+    border: none;
+    padding: 3%;
+}
+
+.vertical-align {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}

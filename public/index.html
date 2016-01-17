@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>COLLEGE WEBSITE</title>
+        <link rel="stylesheet" href="css/lib/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+        <!--FAVICON.ICO CODE START -->
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+        <!--FAVICON.ICO CODE END -->
+        <script src="js/lib/jquery-2.1.4.js"></script>
+        <script src="js/lib/bootstrap.min.js"></script>
+        <script src="js/lib/moment.min.js"></script>
+        <script src="js/lib/angular.min.js"></script>
+        <script src="js/lib/angular-messages.min.js"></script>
+        <script src="js/lib/angular-route.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/controller/about.js"></script>
+        <script src="js/controller/main.js"></script>
+        <script src="js/controller/upload.js"></script>
+        <script src="js/controller/error.js"></script>
+    </head>
+    <body ng-app="collegeApp">
+        <div id="wrap">
+            <div ng-include="'view/github-ribbon.html'"></div>
+            <div ng-include="'view/nav.html'"></div>
+            <div ng-view id="mainContent"></div>
+            <div ng-include="'view/footer.html'"></div>
+        </div>
+    </body>
+</html>
